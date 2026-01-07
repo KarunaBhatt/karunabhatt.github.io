@@ -86,20 +86,21 @@
       font-weight: bold;
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 22px;
-      background-color: #1e3c72;
-      color: white;
-      text-decoration: none;
-      border-radius: 25px;
-      font-weight: bold;
-      transition: 0.3s;
+    .project-box {
+      margin-top: 20px;
+      padding: 20px;
+      border-left: 5px solid #1e3c72;
+      background: #f9faff;
+      border-radius: 8px;
     }
 
-    .btn:hover {
-      background-color: #2a5298;
+    pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 14px;
     }
 
     footer {
@@ -113,52 +114,120 @@
 
 <body>
 
-  <header>
-    <h1>Karuna Bhatt</h1>
-    <p>Data Analyst </p>
-  </header>
+<header>
+  <h1>Karuna Bhatt</h1>
+  <p>Data Analyst | SQL | Power BI | Excel | Web Development</p>
+</header>
 
-  <div class="container">
+<div class="container">
 
-    <section>
-      <h2>Skills</h2>
+  <!-- SKILLS -->
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">SQL</div>
+      <div class="skill">MySQL</div>
+      <div class="skill">Power BI</div>
+      <div class="skill">Excel</div>
+      <div class="skill">GA4</div>
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Bootstrap</div>
+    </div>
+  </section>
+
+  <!-- SQL PROJECT -->
+  <section>
+    <h2>SQL Project – E-Commerce Sales Analysis</h2>
+
+    <div class="project-box">
       <p>
-        I am an aspiring Data Analyst with hands-on experience in SQL, Power BI,
-        and data analysis. I enjoy transforming raw data into meaningful insights
-        that help businesses make informed decisions.
+        Converted Excel sales data into a relational MySQL database and performed
+        analytical SQL queries to extract business insights.
       </p>
 
-      <div class="skills">
-        <div class="skill">SQL</div>
-        <div class="skill">MySQL</div>
-        <div class="skill">Power BI</div>
-        <div class="skill">Excel</div>
-        <div class="skill">GA4</div>
-      </div>
-    </section>
+      <h3>Sample SQL Queries</h3>
 
-    <section>
-      <h2>SQL Mini Project – E-Commerce Sales Analysis</h2>
+      <pre>
+-- Monthly Sales Trend
+SELECT
+  DATE_FORMAT(order_date,'%Y-%m') AS month,
+  SUM(sales_amount) AS total_sales
+FROM orders
+GROUP BY month
+ORDER BY month;
+      </pre>
 
+      <pre>
+-- Top 5 Products by Revenue
+SELECT
+  product_name,
+  SUM(sales_amount) AS revenue
+FROM orders
+GROUP BY product_name
+ORDER BY revenue DESC
+LIMIT 5;
+      </pre>
+
+      <p><strong>Insights:</strong> Identified top products and seasonal sales trends.</p>
+    </div>
+  </section>
+
+  <!-- POWER BI PROJECT -->
+  <section>
+    <h2>Power BI Project – Sales Dashboard</h2>
+
+    <div class="project-box">
       <p>
-        In this project, Excel sales data was converted into a relational MySQL database.
-        CRUD operations, joins, subqueries, and analytical queries were performed
-        to generate actionable business insights.
+        Designed an interactive Power BI dashboard to visualize KPIs such as
+        total sales, profit, region-wise performance, and customer segmentation.
       </p>
 
-      <h3>Project Screenshots</h3>
-      <p><em>(Screenshots will be added here)</em></p>
+      <ul>
+        <li>Data Modeling & Relationships</li>
+        <li>DAX Measures</li>
+        <li>Interactive Filters & Charts</li>
+      </ul>
+    </div>
+  </section>
 
-      <a class="btn" href="https://github.com/KarunaBhatt/karunabhatt.github.io" target="_blank">
-        View GitHub Repository
-      </a>
-    </section>
+  <!-- EXCEL PROJECT -->
+  <section>
+    <h2>Excel Project – Business Reporting</h2>
 
-  </div>
+    <div class="project-box">
+      <p>
+        Cleaned and analyzed raw datasets using Excel functions and pivot tables
+        to create automated business reports.
+      </p>
 
-  <footer>
-    © 2025 Karuna Bhatt | Data Analyst Portfolio
-  </footer>
+      <ul>
+        <li>Pivot Tables & Charts</li>
+        <li>XLOOKUP / IF / Conditional Formatting</li>
+        <li>Data Cleaning & Validation</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WEB DEVELOPMENT -->
+  <section>
+    <h2>Web Development</h2>
+
+    <div class="project-box">
+      <p>
+        Built and deployed a responsive portfolio website using HTML, CSS,
+        JavaScript, and GitHub Pages. Integrated Google Analytics (GA4)
+        for tracking user activity.
+      </p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  © 2025 Karuna Bhatt | Data Analyst Portfolio
+</footer>
 
 </body>
 </html>
