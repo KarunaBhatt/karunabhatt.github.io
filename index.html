@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Karuna Bhatt | Data Analyst</title>
+  <meta charset="UTF-8">
+  <title>Karuna Bhatt | Data Analyst Portfolio</title>
 
   <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PD0Q0M6GBP"></script>
@@ -15,29 +15,83 @@
 
   <style>
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: "Segoe UI", Arial, sans-serif;
       background: #0f172a;
       color: #e5e7eb;
     }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* NAVBAR */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(2,6,23,0.9);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #1e293b;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #93c5fd;
+    }
+
+    nav a {
+      margin-left: 20px;
+      font-size: 15px;
+      color: #cbd5f5;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #60a5fa;
+      left: 0;
+      bottom: -5px;
+      transition: width 0.3s;
+    }
+
+    nav a:hover::after { width: 100%; }
+
+    /* SECTIONS */
     section {
       max-width: 1100px;
       margin: auto;
-      padding: 70px 20px;
+      padding: 80px 20px;
     }
+
     h1, h2, h3 { color: #93c5fd; }
+
     p { line-height: 1.7; color: #cbd5f5; }
 
-    /* HERO */
-    .hero {
-      min-height: 100vh;
+    /* HOME */
+    .home {
+      min-height: 90vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       text-align: center;
-      padding: 40px 20px;
     }
+
+    .home h1 { font-size: 46px; }
 
     /* SKILLS */
     .skills {
@@ -45,6 +99,7 @@
       flex-wrap: wrap;
       gap: 12px;
     }
+
     .skill {
       background: #1e293b;
       padding: 10px 16px;
@@ -59,6 +114,7 @@
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 25px;
     }
+
     .card {
       background: #020617;
       padding: 25px;
@@ -66,33 +122,48 @@
       border: 1px solid #1e293b;
       transition: transform 0.3s;
     }
+
     .card:hover { transform: translateY(-6px); }
 
     pre {
       background: #020617;
       padding: 15px;
       border-radius: 10px;
-      overflow-x: auto;
       font-size: 13px;
+      overflow-x: auto;
       border: 1px solid #1e293b;
+      margin-top: 10px;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 10px;
+      font-size: 14px;
     }
+
     th, td {
       border: 1px solid #334155;
       padding: 8px;
       text-align: left;
-      font-size: 14px;
     }
+
     th { background: #1e293b; }
+
+    /* RESUME BUTTON */
+    .resume-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 22px;
+      background: #60a5fa;
+      color: #020617;
+      border-radius: 25px;
+      font-weight: bold;
+    }
 
     footer {
       text-align: center;
-      padding: 40px;
+      padding: 40px 20px;
       color: #94a3b8;
       font-size: 14px;
     }
@@ -101,17 +172,32 @@
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-container">
+    <div class="logo">Karuna</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
+      <a href="#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HOME -->
+<section id="home" class="home">
   <h1>Hi, I'm Karuna Bhatt</h1>
   <p>
     Data Analyst skilled in SQL, Power BI, and Excel.  
-    I turn raw data into insights and dashboards for decision-making.
+    I turn raw data into insights and dashboards that support
+    smart business decisions.
   </p>
-</div>
+</section>
 
 <!-- SKILLS -->
-<section>
+<section id="skills">
   <h2>Skills</h2>
   <div class="skills">
     <div class="skill">SQL</div>
@@ -127,18 +213,14 @@
 </section>
 
 <!-- PROJECTS -->
-<section>
+<section id="projects">
   <h2>Projects</h2>
 
   <div class="projects">
 
-    <!-- SQL -->
     <div class="card">
       <h3>SQL – E-Commerce Sales Analysis</h3>
-      <p>
-        Built a MySQL database from Excel data and used SQL queries
-        to analyze revenue and top products.
-      </p>
+      <p>Analyzed sales data using MySQL to identify top products and revenue trends.</p>
 
       <pre>
 SELECT product_name,
@@ -157,50 +239,59 @@ LIMIT 3;
       </table>
     </div>
 
-    <!-- POWER BI -->
     <div class="card">
       <h3>Power BI – Sales Dashboard</h3>
       <p>
-        Created interactive dashboards with KPIs:
-      </p>
-      <ul>
-        <li>Total Sales & Profit</li>
-        <li>Region-wise performance</li>
-        <li>Top products & customers</li>
-      </ul>
-      <p>
-        Used DAX measures and slicers for dynamic analysis.
+        Built interactive dashboards with KPIs like total sales,
+        profit, region-wise performance, and top customers using DAX.
       </p>
     </div>
 
-    <!-- EXCEL -->
     <div class="card">
       <h3>Excel – Business Reporting</h3>
       <p>
-        Cleaned and analyzed datasets using Excel and created
-        automated reports.
+        Cleaned datasets and created reports using Pivot Tables,
+        XLOOKUP, IF formulas, and charts.
       </p>
-      <ul>
-        <li>Pivot Tables & Charts</li>
-        <li>XLOOKUP, IF, Conditional Formatting</li>
-        <li>Monthly Sales Summary</li>
-      </ul>
     </div>
 
-    <!-- WEB + GA4 -->
     <div class="card">
       <h3>Web Development & GA4</h3>
       <p>
-        Built this responsive portfolio using HTML, CSS, and JavaScript.
-        Integrated Google Analytics 4 (GA4) to track user traffic and behavior.
+        Developed this portfolio using HTML, CSS, and JavaScript and
+        integrated GA4 for traffic and user behavior tracking.
       </p>
     </div>
 
   </div>
 </section>
 
+<!-- RESUME -->
+<section id="resume">
+  <h2>Resume</h2>
+  <p>
+    Aspiring Data Analyst with hands-on experience in SQL, Power BI,
+    Excel, and web analytics. Strong in data cleaning, visualization,
+    and insight generation.
+  </p>
+
+  <a class="resume-btn" href="#" onclick="alert('Resume PDF upload kar sakti ho')">
+    Download Resume
+  </a>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I am a motivated Data Analyst who enjoys solving problems with data.
+    I continuously improve my skills in analytics, visualization,
+    and modern tools to become industry-ready.
+  </p>
+</section>
+
 <footer>
-  © 2025 Karuna Bhatt · Data Analyst
+  © 2025 Karuna Bhatt · Data Analyst Portfolio
 </footer>
 
 </body>
