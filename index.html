@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Karuna Bhatt | Data Analyst Portfolio</title>
+  <meta charset="UTF-8" />
+  <title>Karuna Bhatt | Data Analyst</title>
 
-  <!-- Google Analytics (GA4) -->
+  <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PD0Q0M6GBP"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -14,219 +14,193 @@
   </script>
 
   <style>
+    * { box-sizing: border-box; }
     body {
-      font-family: Arial, Helvetica, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f5f7fb;
-      color: #333;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
     }
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+    h1, h2, h3 { color: #93c5fd; }
+    p { line-height: 1.7; color: #cbd5f5; }
 
-    header {
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       text-align: center;
       padding: 40px 20px;
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
-      color: white;
-      border-radius: 0 0 20px 20px;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 36px;
-    }
-
-    header p {
-      font-size: 18px;
-      margin-top: 10px;
-      opacity: 0.9;
-    }
-
-    .container {
-      width: 80%;
-      margin: auto;
-      padding: 30px;
-    }
-
-    section {
-      background: white;
-      margin-top: 30px;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    }
-
-    section h2 {
-      color: #1e3c72;
-      margin-bottom: 15px;
-    }
-
-    section h3 {
-      color: #2a5298;
-      margin-top: 25px;
-    }
-
-    p {
-      line-height: 1.7;
-      font-size: 16px;
-    }
-
+    /* SKILLS */
     .skills {
       display: flex;
-      gap: 10px;
       flex-wrap: wrap;
-      margin-top: 10px;
+      gap: 12px;
     }
-
     .skill {
-      background-color: #e3ebff;
-      color: #1e3c72;
-      padding: 8px 14px;
-      border-radius: 20px;
+      background: #1e293b;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid #334155;
       font-size: 14px;
-      font-weight: bold;
     }
 
-    .project-box {
-      margin-top: 20px;
-      padding: 20px;
-      border-left: 5px solid #1e3c72;
-      background: #f9faff;
-      border-radius: 8px;
+    /* PROJECTS */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
     }
+    .card {
+      background: #020617;
+      padding: 25px;
+      border-radius: 16px;
+      border: 1px solid #1e293b;
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-6px); }
 
     pre {
-      background: #272822;
-      color: #f8f8f2;
+      background: #020617;
       padding: 15px;
-      border-radius: 8px;
+      border-radius: 10px;
       overflow-x: auto;
+      font-size: 13px;
+      border: 1px solid #1e293b;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #334155;
+      padding: 8px;
+      text-align: left;
       font-size: 14px;
     }
+    th { background: #1e293b; }
 
     footer {
       text-align: center;
-      margin: 40px 0 20px;
+      padding: 40px;
+      color: #94a3b8;
       font-size: 14px;
-      color: #777;
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Karuna Bhatt</h1>
-  <p>Data Analyst | SQL | Power BI | Excel | Web Development</p>
-</header>
+<!-- HERO -->
+<div class="hero">
+  <h1>Hi, I'm Karuna Bhatt</h1>
+  <p>
+    Data Analyst skilled in SQL, Power BI, and Excel.  
+    I turn raw data into insights and dashboards for decision-making.
+  </p>
+</div>
 
-<div class="container">
+<!-- SKILLS -->
+<section>
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill">SQL</div>
+    <div class="skill">MySQL</div>
+    <div class="skill">Power BI</div>
+    <div class="skill">Excel</div>
+    <div class="skill">GA4</div>
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">Bootstrap</div>
+  </div>
+</section>
 
-  <!-- SKILLS -->
-  <section>
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="skill">SQL</div>
-      <div class="skill">MySQL</div>
-      <div class="skill">Power BI</div>
-      <div class="skill">Excel</div>
-      <div class="skill">GA4</div>
-      <div class="skill">HTML</div>
-      <div class="skill">CSS</div>
-      <div class="skill">JavaScript</div>
-      <div class="skill">Bootstrap</div>
-    </div>
-  </section>
+<!-- PROJECTS -->
+<section>
+  <h2>Projects</h2>
 
-  <!-- SQL PROJECT -->
-  <section>
-    <h2>SQL Project – E-Commerce Sales Analysis</h2>
+  <div class="projects">
 
-    <div class="project-box">
+    <!-- SQL -->
+    <div class="card">
+      <h3>SQL – E-Commerce Sales Analysis</h3>
       <p>
-        Converted Excel sales data into a relational MySQL database and performed
-        analytical SQL queries to extract business insights.
+        Built a MySQL database from Excel data and used SQL queries
+        to analyze revenue and top products.
       </p>
 
-      <h3>Sample SQL Queries</h3>
-
       <pre>
--- Monthly Sales Trend
-SELECT
-  DATE_FORMAT(order_date,'%Y-%m') AS month,
-  SUM(sales_amount) AS total_sales
-FROM orders
-GROUP BY month
-ORDER BY month;
-      </pre>
-
-      <pre>
--- Top 5 Products by Revenue
-SELECT
-  product_name,
-  SUM(sales_amount) AS revenue
+SELECT product_name,
+       SUM(sales_amount) AS revenue
 FROM orders
 GROUP BY product_name
 ORDER BY revenue DESC
-LIMIT 5;
+LIMIT 3;
       </pre>
 
-      <p><strong>Insights:</strong> Identified top products and seasonal sales trends.</p>
+      <table>
+        <tr><th>Product</th><th>Revenue</th></tr>
+        <tr><td>Laptop</td><td>₹4,50,000</td></tr>
+        <tr><td>Mobile</td><td>₹3,20,000</td></tr>
+        <tr><td>Headphones</td><td>₹1,10,000</td></tr>
+      </table>
     </div>
-  </section>
 
-  <!-- POWER BI PROJECT -->
-  <section>
-    <h2>Power BI Project – Sales Dashboard</h2>
-
-    <div class="project-box">
+    <!-- POWER BI -->
+    <div class="card">
+      <h3>Power BI – Sales Dashboard</h3>
       <p>
-        Designed an interactive Power BI dashboard to visualize KPIs such as
-        total sales, profit, region-wise performance, and customer segmentation.
+        Created interactive dashboards with KPIs:
       </p>
-
       <ul>
-        <li>Data Modeling & Relationships</li>
-        <li>DAX Measures</li>
-        <li>Interactive Filters & Charts</li>
+        <li>Total Sales & Profit</li>
+        <li>Region-wise performance</li>
+        <li>Top products & customers</li>
       </ul>
-    </div>
-  </section>
-
-  <!-- EXCEL PROJECT -->
-  <section>
-    <h2>Excel Project – Business Reporting</h2>
-
-    <div class="project-box">
       <p>
-        Cleaned and analyzed raw datasets using Excel functions and pivot tables
-        to create automated business reports.
+        Used DAX measures and slicers for dynamic analysis.
       </p>
+    </div>
 
+    <!-- EXCEL -->
+    <div class="card">
+      <h3>Excel – Business Reporting</h3>
+      <p>
+        Cleaned and analyzed datasets using Excel and created
+        automated reports.
+      </p>
       <ul>
         <li>Pivot Tables & Charts</li>
-        <li>XLOOKUP / IF / Conditional Formatting</li>
-        <li>Data Cleaning & Validation</li>
+        <li>XLOOKUP, IF, Conditional Formatting</li>
+        <li>Monthly Sales Summary</li>
       </ul>
     </div>
-  </section>
 
-  <!-- WEB DEVELOPMENT -->
-  <section>
-    <h2>Web Development</h2>
-
-    <div class="project-box">
+    <!-- WEB + GA4 -->
+    <div class="card">
+      <h3>Web Development & GA4</h3>
       <p>
-        Built and deployed a responsive portfolio website using HTML, CSS,
-        JavaScript, and GitHub Pages. Integrated Google Analytics (GA4)
-        for tracking user activity.
+        Built this responsive portfolio using HTML, CSS, and JavaScript.
+        Integrated Google Analytics 4 (GA4) to track user traffic and behavior.
       </p>
     </div>
-  </section>
 
-</div>
+  </div>
+</section>
 
 <footer>
-  © 2025 Karuna Bhatt | Data Analyst Portfolio
+  © 2025 Karuna Bhatt · Data Analyst
 </footer>
 
 </body>
