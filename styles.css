@@ -1,0 +1,102 @@
+/* Simple responsive portfolio styles */
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --muted:#9aa4b2;
+  --accent:#5eead4;
+  --primary:#7c3aed;
+  --max-w:1100px;
+  --radius:12px;
+  --glass: rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;line-height:1.5;background:linear-gradient(180deg,#071026 0%, #081226 60%);color:#e6eef6;-webkit-font-smoothing:antialiased}
+.container{width:calc(100% - 32px);max-width:var(--max-w);margin:0 auto;padding:40px 16px}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.site-header{position:sticky;top:0;z-index:40;background:rgba(7,12,26,0.35);backdrop-filter:blur(6px);border-bottom:1px solid rgba(255,255,255,0.03)}
+.logo{font-weight:700;color:var(--accent);text-decoration:none}
+.site-nav ul{list-style:none;display:flex;gap:16px;margin:0;padding:0;align-items:center}
+.site-nav a{color:inherit;text-decoration:none;padding:8px 10px;border-radius:8px}
+.site-nav a:hover{background:var(--glass)}
+.nav-toggle{display:none;background:none;border:0;color:inherit;font-size:20px;padding:10px}
+
+/* Hero */
+.hero{padding:80px 0}
+.hero-inner{display:grid;grid-template-columns:1fr 380px;gap:40px;align-items:center}
+.hero h1{font-size:44px;margin:0 0 10px}
+.accent{color:var(--accent)}
+.lead{color:var(--muted);max-width:60ch}
+.btn-primary{background:linear-gradient(90deg,var(--primary),#4f46e5);color:white;padding:12px 18px;border-radius:10px;text-decoration:none}
+.btn-outline{border:1px solid rgba(255,255,255,0.08);padding:11px 16px;border-radius:10px;color:inherit;text-decoration:none}
+.btn-secondary{background:rgba(255,255,255,0.02);padding:10px 14px;border-radius:8px;text-decoration:none}
+.btn-primary:hover,.btn-outline:hover,.btn-secondary:hover{opacity:0.9}
+.hero-image img{width:100%;height:auto;border-radius:var(--radius);box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+
+/* Constrain the portrait to a smaller, responsive square and make it look polished */
+.hero-image .portrait{width:240px;height:240px;object-fit:cover;border-radius:14px;box-shadow:0 12px 30px rgba(2,6,23,0.6);display:block;margin-left:auto;margin-right:0}
+
+@media (max-width:900px){
+  .hero-image .portrait{width:200px;height:200px;margin:0 auto}
+}
+@media (max-width:640px){
+  .hero-image .portrait{width:160px;height:160px}
+}
+
+.section{padding:64px 0}
+.section h2{margin-top:0}
+.about-grid{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:start}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.project-card{background:var(--card);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.project-card img{width:100%;height:160px;object-fit:cover}
+.card-body{padding:14px}
+.proj-actions{margin-top:10px}
+.small{padding:6px 10px;font-size:13px;border-radius:8px}
+
+.skills-grid{display:grid;gap:12px}
+.skill{display:flex;flex-direction:column}
+.bar{background:rgba(255,255,255,0.03);height:12px;border-radius:999px;overflow:hidden;margin-top:6px}
+.bar span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#60a5fa);width:var(--w);}
+
+.contact-grid{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:start}
+.contact-form label{display:block;margin-bottom:12px}
+.contact-form input,.contact-form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit}
+.form-message{color:var(--accent);margin-top:8px}
+
+/* Social icon links in contact card */
+.social-links{display:flex;gap:10px;margin-top:8px}
+.social-link{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:10px;color:inherit;background:rgba(255,255,255,0.02);text-decoration:none;transition:all .18s ease}
+.social-link svg{width:20px;height:20px}
+.social-link:hover{transform:translateY(-3px);background:linear-gradient(90deg,var(--primary),#4f46e5);color:white}
+
+/* Visually hidden (for accessible labels) */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Compact footer styles */
+.site-footer-simple{padding:20px 16px;background:linear-gradient(180deg,#041025,#071026);color:var(--muted);border-top:1px solid rgba(255,255,255,0.03)}
+.footer-simple-inner{display:flex;flex-direction:column;align-items:center;gap:10px;max-width:var(--max-w);margin:0 auto;padding:14px 0}
+.footer-line{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:center}
+.footer-name{font-weight:700;color:var(--accent)}
+.footer-links a{color:inherit;text-decoration:none;padding:6px 10px;border-radius:8px;background:rgba(255,255,255,0.02);transition:all .15s ease}
+.footer-links a:hover{background:linear-gradient(90deg,var(--primary),#4f46e5);color:white}
+.footer-copy{opacity:0.85;font-size:13px;margin-top:6px}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero-inner{grid-template-columns:1fr;}
+  .about-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  .site-nav{display:none}
+  .nav-toggle{display:block}
+  body.nav-open .site-nav{display:block;position:absolute;left:0;right:0;top:64px;background:rgba(7,12,26,0.95);padding:18px}
+  .grid{grid-template-columns:1fr}
+  .project-card img{height:140px}
+}
+
+/* Utilities */
+.text-center{text-align:center}

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Personal portfolio of Karuna Bhatt - web developer" />
+    <title>Karuna — Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Make images responsive and constrain sizes */
+      img { max-width: 100%; height: auto; display: block; }
+
+      /* Hero portrait: circular, slightly bigger size, centered and nudged toward center */
+      .hero-image { display: flex; align-items: center; justify-content: center; transform: translateX(-12px); }
+      .hero-image img { width: 200px; height: 200px; max-width: 200px; border-radius: 50%; object-fit: cover; box-shadow: 0 6px 18px rgba(0,0,0,0.15); transition: transform 0.25s ease; }
+
+      /* Project thumbnails: fixed height, keep aspect via object-fit */
+      .projects-grid .project-card img { width: 100%; max-height: 180px; height: 180px; object-fit: cover; }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="#">Bhatt Karuna</a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <nav class="site-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="D:\Karuna Bhatt.Resume.pdf" class="btn-secondary" target="_blank" rel="noopener noreferrer" download aria-label="Open resume in new tab">Resume</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <h1>Hi, I’m <span class="accent">Karuna Bhatt</span>.</h1>
+            <p class="lead">Data Analyst[Intern]</p>
+            <p>
+              <a href="#projects" class="btn-primary">See my work</a>
+              <a href="#contact" class="btn-outline">Get in touch</a>
+            </p>
+          </div>
+          <div class="hero-image">
+            <!-- Use a local portrait if present at assets/portrait.jpg; otherwise fall back to Unsplash -->
+            <img src="C:\Users\Admin\Downloads\Bhatt.png" alt="Portrait of Karuna Bhatt" width="100px" height="100px" loading="lazy" onerror="this.onerror=null;this.src='https://source.unsplash.com/featured/?portrait'" />
+            <noscript>
+              <img class="portrait" src="assets/portrait.jpg" alt="Portrait of Karuna Bhatt" width="320" height="320" />
+            </noscript>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section about">
+        <div class="container">
+          <h2>About me</h2>
+          <div class="about-grid">
+            <div>
+              <p>I am Karuna Bhatt, a passionate Data Analyst and Web Developer who enjoys working at the intersection of data and technology. I specialize in analyzing datasets, creating insightful dashboards, and developing responsive web applications. My technical skill set includes Excel, SQL, Power BI, Python, HTML, CSS, and JavaScript, and I am currently expanding my knowledge of AWS and cloud computing. I am driven by curiosity, continuous learning, and the desire to turn complex data into clear, actionable insights while building efficient and modern web solutions.</p>
+              <p>Based in Vadodara. Open to freelance and full-time opportunities.</p>
+            </div>
+           
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section projects">
+        <div class="container">
+          <h2>Selected projects</h2>
+          <div class="grid projects-grid">
+            <article class="project-card">
+              <img src="D:\internship Data analysis 2025\karunabhatt.github.io-main\CRM.png" alt="Project image" />
+              <div class="card-body">
+                <h3>CRM Dashboard</h3>
+                <p>A data-driven CRM dashboard created in Power BI to analyze leads, opportunities, and conversion trends. Features include KPI cards, charts, and slicers for real-time business insights.</p>
+                <p class="proj-actions"><a href="#" class="btn-outline small">Live</a> <a href="#" class="btn-secondary small">Code</a></p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img src="D:\internship Data analysis 2025\karunabhatt.github.io-main\Excel Dashboard.jpg" alt="Project image" />
+              <div class="card-body">
+                <h3>sales Analysis Dashboard using Excel</h3>
+                <p>An interactive dashboard built to analyze sales performance, revenue trends, and key KPIs, enabling data-driven business decisions through clear visual insights.</p>
+                <p class="proj-actions"><a href="#" class="btn-outline small">Live</a> <a href="#" class="btn-secondary small">Code</a></p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img src="D:\internship Data analysis 2025\Project Dashboard.png" alt="Project image" />
+              <div class="card-body">
+                <h3>Project Dashboard using odoo server</h3>
+                <p>Developed a data analytics dashboard using the Odoo server to convert ERP data into actionable insights through KPIs, reports, and visual dashboards.</p>
+                <p class="proj-actions">
+  <a 
+    href="https://karunabhatt.github.io/sales-dashboard/" 
+    class="btn-outline small" 
+    target="_blank">
+    Live
+  </a>
+
+  <a 
+    href="https://github.com/KarunaBhatt/sales-analysis-dashboard" 
+    class="btn-secondary small" 
+    target="_blank">
+    Code
+  </a>
+</p>
+
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section skills">
+        <div class="container">
+          <h2>Skills</h2>
+          <div class="skills-grid">
+            <div class="skill"><strong>HTML</strong><div class="bar"><span style="--w:95%">50%</span></div></div>
+            <div class="skill"><strong>CSS</strong><div class="bar"><span style="--w:90%">50%</span></div></div>
+            <div class="skill"><strong>JavaScript</strong><div class="bar"><span style="--w:85%">50%</span></div></div>
+            <div class="skill"><strong>Power Bi</strong><div class="bar"><span style="--w:70%">100%</span></div></div>
+            <div class="skill"><strong>Python</strong><div class="bar"><span style="--w:75%">50%</span></div></div>
+            <div class="skill"><strong>SQL</strong><div class="bar"><span style="--w:80%">50%</span></div></div>
+            <div class="skill"><strong>Excel</strong><div class="bar"><span style="--w:90%">80%</span></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="container">
+          <h2>Contact</h2>
+          <div class="contact-grid">
+            <form id="contact-form" class="contact-form" aria-label="Contact form">
+              <label>
+                Your name
+                <input type="text" name="name" required />
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" required />
+              </label>
+              <label>
+                Message
+                <textarea name="message" rows="6" required></textarea>
+              </label>
+              <p><button type="submit" class="btn-primary">Send message</button></p>
+              <p id="form-message" class="form-message" aria-live="polite"></p>
+            </form>
+
+            
+      </section>
+    </main>
+
+    <footer class="site-footer-simple" role="contentinfo">
+      <div class="footer-simple-inner container">
+        <div class="footer-line">
+          <span class="footer-name">Karuna Bhatt</span>
+          <span class="sep">|</span>
+          <span>Data Analyst &amp; Web Developer</span>
+        </div>
+
+        <div class="footer-line footer-links" aria-label="Social links">
+          <a href="https://www.linkedin.com/in/karunabhatt/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/karunabhatt" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://wa.me/918238969034" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+
+        <div class="footer-copy">© 2026 All rights reserved</div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script> 
+  </body>
+</html>
